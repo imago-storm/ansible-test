@@ -8,3 +8,9 @@
     - name: whoami
       shell: whoami
       become: yes
+
+
+    - name: get artifact
+      ansible.builtin.fetch:
+        src: http://art.nimbus.beescloud.com:80/artifactory/thirdparty/gwt-servlet/gwt-servlet/2.5.0/gwt-servlet-2.5.0-ec1.jar
+        dest: /tmp/file.jar
